@@ -1,1 +1,3 @@
 theme: jekyll-theme-cayman
+title: SpeRec
+description: A speech recognition (speech-to-text) model using KALDI, Java and Python

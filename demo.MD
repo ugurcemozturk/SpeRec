@@ -24,8 +24,10 @@
 
 <h4 id="create-a-document"><i class="icon-file"></i> Create a document</h4>
 
-<p>Bu rehber, kullanmakta olduğnuz linux dagitimin’da aşağıdaki paketlerin yüklü olduğunu varsayar. Eğer emin değilseniz aşağıdaki scripti kuruluma başlamadan önce çalıştırın:  <br>
-sudo apt-get install atlas autoconf automake git libtool svn wget zlib</p>
+<p>Bu rehber, kullanmakta olduğnuz linux dagitimin’da aşağıdaki paketlerin yüklü olduğunu varsayar. Eğer emin değilseniz aşağıdaki scripti kuruluma başlamadan önce çalıştırın: </p>
+
+<pre><code>sudo apt-get install atlas autoconf automake git libtool svn wget zlib
+</code></pre>
 
 <p>KALDI’yı indirme: </p>
 
@@ -83,8 +85,6 @@ sudo apt-get install atlas autoconf automake git libtool svn wget zlib</p>
 <p>scripti yeterli. Bu adımda build yapıldığından biraz vakit alabilir, kahvenizi yenileyin!</p>
 
 <hr>
-
-
 
 <h2 id="veri-hazirlama">Veri Hazirlama</h2>
 

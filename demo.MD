@@ -105,8 +105,17 @@
 <pre><code>cd ../rm/s5;  cp -R conf exp steps utils ../../Demo/; cp cmd.sh path.sh ../../Demo
 </code></pre>
 
-<p>KALDI’nin  akustik modelimizi egitebilmek icin istedigi bir takim veriler ve bu veriler bir formati vardir. <br>
-All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.</p>
+<p>Verilerimiz için gerekli iskeleti kurduk, şimdi sıra içerilerini doldurmakta. <br>
+Az önce verilerimizi train ve test olarak iki ayrı klasörde tutacağımızdak bahsettik. Tahmin ettiğiniz gibi train klasöründeki veriler ile modelimizi eğitip, test dosyasındaki verilerimiz ile modelimizi test edip başarısını<em>(accuracy)</em> ölçeceğiz. <strong>ASR*</strong>(Automated Speech Recognition)* sistemlerinde model başarısını ölçmek icin kullanılan birim <strong>WER</strong> <em>(Word Error Rate)</em> olarak adlandırılır. WER oranı düştükçe modelimizin performansı artar. WER hakkında daha derine inmek icin: <a href="http://letmegooglethat.com/?q=Word%20Error%20Rate">Word Erro Rate Rate</a></p>
+
+<p>Az önce yarattığımız train ve test klasörlerinin ikisinin de içerisine yaratmamız gereken metin dosyaları var. Bunlar; <br>
+spk2gender <br>
+wav.scp  <br>
+text <br>
+utt2spk <br>
+corpus.txt  </p>
+
+<p>All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.</p>
 
 <h4 id="rename-a-document"><i class="icon-pencil"></i> Rename a document</h4>
 

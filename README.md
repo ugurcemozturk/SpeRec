@@ -1,3 +1,83 @@
+SpeRec
+===================
+**KALDI** ve **Java** kullanarak, adim adim konusmadan metine (text-to-speech) programi gelistirme rehberi! 
+
+---------
+
+
+Isinma
+-------------
+
+İlk olarak gerekli üçüncü parti yazılımları yükleyip çalışma ortamımızı kuracağız. Sonrasında ihtiyacımız olan verilerden bahsedip (ki burada **herkes kendi ses kaydını kullanacak**), ilk modelimizi oluşturacağız. Son aşamada ise -*Java sadece burada devreye giriyor*- kaydettiğimiz sesleri ekrana bastıracağız. 
+
+> **On Kosullar:**
+
+> - Linux İşletim Sistemi
+
+> - Temel Linux Shell kullanımı
+
+> - Temel Java - Swing kodlama
+
+----------
+
+Gerekli Yazilimlari Yükleme
+#### <i class="icon-file"></i> Create a document
+
+Bu rehber, kullanmakta olduğnuz linux dagitimin'da aşağıdaki paketlerin yüklü olduğunu varsayar. Eğer emin değilseniz aşağıdaki scripti kuruluma başlamadan önce çalıştırın: 
+sudo apt-get install atlas autoconf automake git libtool svn wget zlib
+ 
+KALDI'yı indirme: 
+git clone https://github.com/kaldi-asr/kaldi
+
+Bu yüklemenin ardından dosyayı indirdiğiniz konumdaki (aksini belitrmediyseniz /home/{kullanıcı adınız} klasörü) "kaldı" klasörünün içeriği:
+
+
+----------
+
+<i class="icon-folder-open"></i>/egs
+
+:   > Dokumantasyonlari ile birlikte 44 farklı örnek proje. Malesef birkaçı dışında ses dosyalarını indirmek ücretli.
+
+<i class="icon-folder-open"></i>/misc
+
+:   > Çeşitli kaynak ve pdf dosyalarını içeren, daha derine KALDI öğrenmek isteyenler için faydalı kaynaklar içeren bir klasör. Ayrıca resmi logo ve HTK'dan KALDI'ye çevirme yapan scriptler içerir. (Kabul, hiç girmedim!)
+
+<i class="icon-folder-open"></i>/src
+
+:   > KALDI kaynak kodu
+
+<i class="icon-folder-open"></i>/tools
+
+:   > ATLAS, SRILM gibi KALDI'nın kullandığı üçüncü parti yazılımlar. 
+
+<i class="icon-folder-open"></i>/windows
+
+:   > KALDI'yı Windows'ta kulanmak için gerekli araçlar. (Malesef, bu rehberde geçen son Windows kelimesi) 
+	
+
+
+----------
+
+İndirme işleminden sonra gelelim kuruluma. Gerekli adımlar INSTALL dosyasında yazıyor. Tek adımda yapmak için
+
+          cd kaldi/tools/; make; cd ../src; ./configure; make
+
+scripti yeterli. Bu adımda build yapıldığından biraz vakit alabilir, kahvenizi yenileyin!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # SpeRec
 Akustik Model nedir?
 Language Model nedir?

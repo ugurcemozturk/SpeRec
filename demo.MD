@@ -27,8 +27,10 @@
 <p>Bu rehber, kullanmakta olduğnuz linux dagitimin’da aşağıdaki paketlerin yüklü olduğunu varsayar. Eğer emin değilseniz aşağıdaki scripti kuruluma başlamadan önce çalıştırın:  <br>
 sudo apt-get install atlas autoconf automake git libtool svn wget zlib</p>
 
-<p>KALDI’yı indirme:  <br>
-git clone <a href="https://github.com/kaldi-asr/kaldi">https://github.com/kaldi-asr/kaldi</a></p>
+<p>KALDI’yı indirme: </p>
+
+<pre><code>git clone https://github.com/kaldi-asr/kaldi
+</code></pre>
 
 <p>Bu yüklemenin ardından dosyayı indirdiğiniz konumdaki (aksini belitrmediyseniz /home/{kullanıcı adınız} klasörü) “kaldı” klasörünün içeriği:</p>
 
@@ -80,11 +82,31 @@ git clone <a href="https://github.com/kaldi-asr/kaldi">https://github.com/kaldi-
 
 <p>scripti yeterli. Bu adımda build yapıldığından biraz vakit alabilir, kahvenizi yenileyin!</p>
 
+<hr>
+
+
+
+<h2 id="veri-hazirlama">Veri Hazirlama</h2>
+
 <h4 id="switch-to-another-document"><i class="icon-folder-open"></i> Switch to another document</h4>
 
-<p>All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.</p>
+<p>Verilerimizi hazirlamadan once yeni projemiz için /egs klasörünün icinde ‘Demo’ adindaki yeni klasörümüzü yaratalım.</p>
 
+<pre><code>cd /egs; mkdir Demo; cd Demo
+</code></pre>
 
+<p>Su an Demo klasörünün içindeyiz. Modelimizin eğitim ve test dataları farklı olacağı için proje klasöründe iki ayrı klasöre ihtiyacımız var; train ve test. Projemizin derli toplu olması için bunlar data adında bir klasör yaratıp, bu klasörün içinde olusturalim:</p>
+
+<pre><code>mkdir data; cd data; mkdir train; mkdir test; cd ..
+</code></pre>
+
+<p>Bu adımlardan sonra ‘egs’ klasörü altındaki diğer örnek projelerden almamız gereken dosya ve klasörler var. Bunu ister secim yapip copy-paste ile ister bir script ile yapabiliriz. Gerekli script;</p>
+
+<pre><code>cd ../rm/s5;  cp -R conf exp steps utils ../../Demo/; cp cmd.sh path.sh ../../Demo
+</code></pre>
+
+<p>KALDI’nin  akustik modelimizi egitebilmek icin istedigi bir takim veriler ve bu veriler bir formati vardir. <br>
+All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.</p>
 
 <h4 id="rename-a-document"><i class="icon-pencil"></i> Rename a document</h4>
 

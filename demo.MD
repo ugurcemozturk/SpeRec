@@ -95,9 +95,9 @@
 <pre><code>cd /egs; mkdir Demo; cd Demo
 </code></pre>
 
-<p>Su an Demo klasörünün içindeyiz. Modelimizin eğitim ve test dataları farklı olacağı için proje klasöründe iki ayrı klasöre ihtiyacımız var; train ve test. Projemizin derli toplu olması için bunlar data adında bir klasör yaratıp, bu klasörün içinde olusturalim:</p>
+<p>Su an Demo klasörünün içindeyiz. Modelimizin eğitim ve test verileri farklı olacağı için proje klasöründe iki ayrı klasöre ihtiyacımız var; train ve test. Bu iki klasör dışında ileride açıklayacağım ‘local’ adında bir kalsore   ve onun icinde de ‘dict’ adinda bir klasore daha ihtiyacımız var. Projemizin derli toplu olması için bunlar data adında bir klasör yaratıp, bunları data klasörünün içinde olusturalim:</p>
 
-<pre><code>mkdir data; cd data; mkdir train; mkdir test; cd ..
+<pre><code>mkdir data; cd data; mkdir train; mkdir test; mkdir local; cd local; mkdir dict; cd ../../
 </code></pre>
 
 <p>Bu adımlardan sonra ‘egs’ klasörü altındaki diğer örnek projelerden almamız gereken dosya ve klasörler var. Bunu ister secim yapip copy-paste ile ister bir script ile yapabiliriz. Gerekli script;</p>
@@ -106,16 +106,11 @@
 </code></pre>
 
 <p>Verilerimiz için gerekli iskeleti kurduk, şimdi sıra içerilerini doldurmakta. <br>
-Az önce verilerimizi train ve test olarak iki ayrı klasörde tutacağımızdak bahsettik. Tahmin ettiğiniz gibi train klasöründeki veriler ile modelimizi eğitip, test dosyasındaki verilerimiz ile modelimizi test edip başarısını<em>(accuracy)</em> ölçeceğiz. <strong>ASR*</strong>(Automated Speech Recognition)* sistemlerinde model başarısını ölçmek icin kullanılan birim <strong>WER</strong> <em>(Word Error Rate)</em> olarak adlandırılır. WER oranı düştükçe modelimizin performansı artar. WER hakkında daha derine inmek icin: <a href="http://letmegooglethat.com/?q=Word%20Error%20Rate">Word Erro Rate Rate</a></p>
+Az önce verilerimizi train ve test olarak iki ayrı klasörde tutacağımızdak bahsettik. Tahmin ettiğiniz gibi train klasöründeki veriler ile modelimizi eğitip, test dosyasındaki verilerimiz ile modelimizi test edip başarısını(acçüracy) ölçeceğiz. ASR(Automated Speech Recognition) sistemlerinde model başarısını ölçmek icin kullanılan birim WER (Word Error Rate) olarak adlandırılır. WER oranı düştükçe modelimizin performansı artar. WER hakkında daha derine inmek icin: <a href="http://letmegooglethat.com/?q=Word+Error+Rate">http://letmegooglethat.com/?q=Word+Error+Rate</a></p>
 
-<p>Az önce yarattığımız train ve test klasörlerinin ikisinin de içerisine yaratmamız gereken metin dosyaları var. Bunlar; <br>
-spk2gender <br>
-wav.scp  <br>
-text <br>
-utt2spk <br>
-corpus.txt  </p>
+<p>Az önce yarattığımız train ve test klasörlerinin ikisinin de içerisine yaratmamız gereken metin dosyaları var. Bunların içeriği ve formatını genel olarak;</p>
 
-<p>All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.</p>
+<p>wav.scp  =&gt; </p>
 
 <h4 id="rename-a-document"><i class="icon-pencil"></i> Rename a document</h4>
 

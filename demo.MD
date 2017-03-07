@@ -110,7 +110,25 @@ Az önce verilerimizi train ve test olarak iki ayrı klasörde tutacağımızdak
 
 <p>Az önce yarattığımız train ve test klasörlerinin ikisinin de içerisine yaratmamız gereken metin dosyaları var. Bunların içeriği ve formatını genel olarak;</p>
 
-<p>wav.scp  =&gt; </p>
+<p>wav.scp  =&gt; {konuşmaİD} {ses dosyasının tam dosya yolu} <br>
+Bu dosya her kayıttaki konuşma parçasını (utterance), o ses kaydının dosya yoluna bağlar. Dosya yolu mutlaka full path olmalıdır, “/home/{kullanıcı adı}/kaldi/egs/Demo/data/train/0001.wav” gibi </p>
+
+<p>text =&gt; {konuşmaİD} {konuşma metni} <br>
+Bu dosya her konuşmayı, o konuşmada söylenen metinle eşleştirir.</p>
+
+<p>utt2spk =&gt; {konuşmaİD} {konuşmacıİD}</p>
+
+<p>Yukarıda bahsettiğim /local klasörünün içinde oluşturmamız gereken dosyalar var;</p>
+
+<p>corpus.txt =&gt; {konuşma metni} <br>
+text dosyamızdaki tüm cümleleri ARPA formatında sakladığımız dosya.</p>
+
+<p>Yine /local içinde yarattığımız /dict içinde de lexicon adında bir dosya gerekli;</p>
+
+<p>lexicon =&gt; {kelime}{k e l i m e}  <br>
+text dosyası içindeki her kelimeyi teker teker alıp, harflerin araları birer boşluklu formatta sakladığmız dosya. ‘evet e v e t’ gibi.</p>
+
+<p>All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.</p>
 
 <h4 id="rename-a-document"><i class="icon-pencil"></i> Rename a document</h4>
 
